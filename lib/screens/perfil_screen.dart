@@ -10,7 +10,7 @@ class PerfilScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppTheme.background,
       appBar: AppBar(
-        title: const Text('Mi Perfil'),
+        title: const Text('EL PERFIN (CAMBIADO)'),
         backgroundColor: AppTheme.primary,
         foregroundColor: Colors.white,
       ),
@@ -21,39 +21,60 @@ class PerfilScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 20),
-              decoration: const BoxDecoration(
-                color: AppTheme.primary,
-              ),
+              decoration: const BoxDecoration(color: AppTheme.primary),
               child: Column(
                 children: [
                   Container(
-                    width: 80, height: 80,
+                    width: 80,
+                    height: 80,
                     decoration: BoxDecoration(
                       color: AppTheme.accent,
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.white, width: 3),
                     ),
-                    child: const Icon(Icons.person, color: Colors.white, size: 42),
+                    child: const Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 42,
+                    ),
                   ),
                   const SizedBox(height: 12),
-                  Text('Juan Carlos Mamani',
+                  Text(
+                    'Juan Carlos Mamani',
                     style: GoogleFonts.poppins(
-                      color: Colors.white, fontSize: 18,
-                      fontWeight: FontWeight.w700)),
-                  Text('CI: 7654321 LP',
-                    style: GoogleFonts.poppins(color: Colors.white70, fontSize: 13)),
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    'CI: 7654321 LP',
+                    style: GoogleFonts.poppins(
+                      color: Colors.white70,
+                      fontSize: 13,
+                    ),
+                  ),
                   const SizedBox(height: 12),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 5,
+                    ),
                     decoration: BoxDecoration(
                       color: AppTheme.accent.withOpacity(0.25),
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: AppTheme.accent.withOpacity(0.6)),
+                      border: Border.all(
+                        color: AppTheme.accent.withOpacity(0.6),
+                      ),
                     ),
-                    child: Text('Ciudadano Verificado',
+                    child: Text(
+                      'Ciudadano Verificado',
                       style: GoogleFonts.poppins(
-                        color: AppTheme.accentLight, fontSize: 12,
-                        fontWeight: FontWeight.w600)),
+                        color: AppTheme.accentLight,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -86,13 +107,33 @@ class PerfilScreen extends StatelessWidget {
               child: Column(
                 children: [
                   _section('Cuenta'),
-                  _optionItem(Icons.person_outline, 'Datos Personales', 'Actualizar información'),
-                  _optionItem(Icons.lock_outline, 'Seguridad', 'Contraseña y autenticación'),
-                  _optionItem(Icons.notifications_outlined, 'Notificaciones', 'Gestionar alertas'),
+                  _optionItem(
+                    Icons.person_outline,
+                    'Datos Personales',
+                    'Actualizar información',
+                  ),
+                  _optionItem(
+                    Icons.lock_outline,
+                    'Seguridad',
+                    'Contraseña y autenticación',
+                  ),
+                  _optionItem(
+                    Icons.notifications_outlined,
+                    'Notificaciones',
+                    'Gestionar alertas',
+                  ),
                   const SizedBox(height: 16),
                   _section('Soporte'),
-                  _optionItem(Icons.help_outline, 'Centro de Ayuda', 'Preguntas frecuentes'),
-                  _optionItem(Icons.phone_outlined, 'Contactar Municipio', 'Líneas de atención'),
+                  _optionItem(
+                    Icons.help_outline,
+                    'Centro de Ayuda',
+                    'Preguntas frecuentes',
+                  ),
+                  _optionItem(
+                    Icons.phone_outlined,
+                    'Contactar Municipio',
+                    'Líneas de atención',
+                  ),
                   _optionItem(Icons.info_outline, 'Acerca de', 'v1.0.0'),
                   const SizedBox(height: 16),
                   SizedBox(
@@ -100,14 +141,19 @@ class PerfilScreen extends StatelessWidget {
                     child: OutlinedButton.icon(
                       onPressed: () {},
                       icon: const Icon(Icons.logout, color: AppTheme.error),
-                      label: Text('Cerrar Sesión',
+                      label: Text(
+                        'Cerrar Sesión',
                         style: GoogleFonts.poppins(
-                          color: AppTheme.error, fontWeight: FontWeight.w600)),
+                          color: AppTheme.error,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: AppTheme.error),
                         padding: const EdgeInsets.symmetric(vertical: 13),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
@@ -124,27 +170,43 @@ class PerfilScreen extends StatelessWidget {
   Widget _stat(String value, String label) {
     return Column(
       children: [
-        Text(value,
+        Text(
+          value,
           style: GoogleFonts.poppins(
-            fontSize: 22, fontWeight: FontWeight.w800, color: AppTheme.primary)),
+            fontSize: 22,
+            fontWeight: FontWeight.w800,
+            color: AppTheme.primary,
+          ),
+        ),
         const SizedBox(height: 2),
-        Text(label,
-          style: GoogleFonts.poppins(fontSize: 11, color: AppTheme.textSecondary),
-          textAlign: TextAlign.center),
+        Text(
+          label,
+          style: GoogleFonts.poppins(
+            fontSize: 11,
+            color: AppTheme.textSecondary,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
 
-  Widget _dividerV() => Container(width: 1, height: 40, color: AppTheme.divider);
+  Widget _dividerV() =>
+      Container(width: 1, height: 40, color: AppTheme.divider);
 
   Widget _section(String title) => Padding(
     padding: const EdgeInsets.only(bottom: 8, top: 4),
     child: Align(
       alignment: Alignment.centerLeft,
-      child: Text(title,
+      child: Text(
+        title,
         style: GoogleFonts.poppins(
-          fontSize: 13, fontWeight: FontWeight.w700,
-          color: AppTheme.textSecondary, letterSpacing: 0.5)),
+          fontSize: 13,
+          fontWeight: FontWeight.w700,
+          color: AppTheme.textSecondary,
+          letterSpacing: 0.5,
+        ),
+      ),
     ),
   );
 
@@ -160,7 +222,8 @@ class PerfilScreen extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 36, height: 36,
+            width: 36,
+            height: 36,
             decoration: BoxDecoration(
               color: AppTheme.primary.withOpacity(0.08),
               borderRadius: BorderRadius.circular(10),
@@ -172,17 +235,29 @@ class PerfilScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title,
+                Text(
+                  title,
                   style: GoogleFonts.poppins(
-                    fontSize: 13, fontWeight: FontWeight.w600,
-                    color: AppTheme.textPrimary)),
-                Text(subtitle,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: AppTheme.textPrimary,
+                  ),
+                ),
+                Text(
+                  subtitle,
                   style: GoogleFonts.poppins(
-                    fontSize: 11, color: AppTheme.textSecondary)),
+                    fontSize: 11,
+                    color: AppTheme.textSecondary,
+                  ),
+                ),
               ],
             ),
           ),
-          const Icon(Icons.chevron_right, color: AppTheme.textSecondary, size: 20),
+          const Icon(
+            Icons.chevron_right,
+            color: AppTheme.textSecondary,
+            size: 20,
+          ),
         ],
       ),
     );
